@@ -19,7 +19,6 @@ function setNight(night) {
 }
 function checkNightOnLoad() {
   let h = new Date().getHours();
-  console.log(h);
   if (h < 7 || h > 18) {
     setNight(true);
   } else {
