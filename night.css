@@ -1,0 +1,28 @@
+html {
+  background-color: white;
+  color: black;
+  // By all means, set your own colours here, and simply swap them in the html.night decalaration below, or tweak them slightly when swaping, you may want slightly diferent shades of each colour.
+}
+html.night {
+  background-color: black;
+  color: white;
+}
+.night-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: none;
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  font-weight: bold;
+  // All the above does is position and style the button in the bottom-right of the page, chances are you want something different, so go nuts! The important bit is below.
+  background-color: black;
+  color: white;
+}
+.night .night-button {
+  background-color: white;
+  color: black;
+}
+
+// Add all your own night styles to here as well. Want <inputs> to colour differently? Set a rule for .night input. A different coloured <h1>? .night h1.
+// Heck, greyscale all your images in night mode? .night img { filter: grayscale(100%); }
