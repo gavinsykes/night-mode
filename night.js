@@ -2,11 +2,9 @@ const keyElems = {
   html        : document.querySelector('html'),
   nightButton : document.querySelector('.night-button')
 };
+const isNight = () => keyElems.html.classList.contains('night');
 function toggleNight() {
-  isNight() ? setNight(false) : setNight(true);
-}
-function isNight() {
-  return keyElems.html.classList.contains('night');
+  setNight(!isNight());
 }
 function setNight(night) {
   if (night) {
