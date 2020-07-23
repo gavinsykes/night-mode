@@ -1,7 +1,13 @@
 const keyElems = {
   html        : document.querySelector('html'),
-  nightButton : document.querySelector('.night-button')
+  nightButton : document.querySelector('.night-button') ? document.querySelector('.night-button') : undefined
 };
+if (!keyELems.nightButton) {
+  let nButton = document.createElement('button');
+  nButton.classList.add('night-button');
+  keyElems.nightButton = nButton;
+  document.querySelector('body').prepend(keyElems.nightButton);
+}
 const isNight = () => keyElems.html.classList.contains('night');
 function toggleNight() {
   setNight(!isNight());
